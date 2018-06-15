@@ -1,0 +1,221 @@
+@charset "UTF-8";
+html, body, header {
+  margin: 0; }
+
+header {
+  /*aタグをまとめて設定*/ }
+  header a, header h1 {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden; }
+
+header > section.one {
+  height: 100vh;
+  background-image: url(https://raw.githubusercontent.com/marumorio/yuruhuwa/master/img/thursday-afternoon-july1964-1560x822.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  overflow: hidden; }
+  header > section.one a.logo {
+    height: 50px;
+    width: 100px;
+    background-image: url(https://i.imgur.com/Jlil7zl.png); }
+  header > section.one h1.title {
+    margin-top: 5%;
+    margin-left: 3%;
+    height: 50vh;
+    background-position: left;
+    background-image: url(https://i.imgur.com/XSzrCCa.png); }
+
+header > section.two {
+  background-color: #313131;
+  overflow: hidden; }
+  header > section.two h2 {
+    margin-left: 20%;
+    color: white;
+    font-size: 4vw; }
+
+/*-------------------------*/
+/*mainは組み合わせるときに消す*/
+html, body {
+  margin: 0; }
+
+main {
+  text-align: center;
+  background-color: #424242;
+  overflow: hidden; }
+
+/*↑ここが消えていればOK*/
+/*ここでまとめて設定*/
+#board {
+  overflow: hidden;
+  padding-top: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: white;
+  background-color: #424242; }
+  #board a {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 20%;
+    margin-left: 3%;
+    height: 80vh; }
+  #board h2 {
+    color: #ffd740;
+    text-align: left;
+    font-size: 200%;
+    margin-left: 10%; }
+  #board .flex {
+    display: flex;
+    height: 100vh; }
+
+/*sectionごとに設定*/
+#board > .flex > section.one {
+  flex: 1;
+  text-align: left;
+  margin-left: 10%; }
+
+#board > .flex > section.two {
+  flex: 1; }
+
+/*select picture*/
+#board > .flex.one > section.two a {
+  background-image: url(https://raw.githubusercontent.com/marumorio/yuruhuwa/master/img/kenkou.png); }
+
+#board > .flex.two > section.two a {
+  background-image: url(https://raw.githubusercontent.com/marumorio/yuruhuwa/master/img/wi.png); }
+
+#board > .flex.three > section.two a {
+  background-image: url(https://raw.githubusercontent.com/marumorio/yuruhuwa/master/img/blog.png); }
+
+#board > .flex.four > section.two a {
+  background-image: url(https://raw.githubusercontent.com/marumorio/yuruhuwa/master/img/login.png); }
+
+@media screen and (max-width: 600px) {
+  #board > .flex {
+    overflow: hidden;
+    display: inline; }
+    #board > .flex a {
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-top: 20%;
+      margin-left: 3%;
+      /*height: 80vh;*/ } }
+/*-------------------------*/
+/*--------------footer------------------*/
+/*まとめて設定*/
+footer {
+  text-align: center;
+  background-color: black; }
+  footer small {
+    display: block;
+    color: white;
+    background-color: black; }
+
+footer > .wrap > section.one {
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+  background-color: #313131;
+  color: white;
+  text-align: center; }
+  footer > .wrap > section.one a {
+    color: #313131;
+    border: 1px white;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 5px;
+    letter-spacing: 5px;
+    text-decoration: none; }
+  footer > .wrap > section.one a:hover {
+    background-color: #313131;
+    border: 1px solid #313131;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    color: white;
+    overflow: hidden; }
+
+/*
+body {
+  background: #ECC561;
+  text-align: center;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+.logo img {
+  height: 18.75em;
+  margin-top: 6em;
+}
+
+h1 {
+  color: rgba(0,0,0,0.5);
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.doc {
+  margin: 3em 0;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+
+  a {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 0.75em 0.7em;
+    color: white;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    &:hover {
+      background: rgba(0,0,0,0.2);
+      color: white;
+      transition: all 0.15s linear;
+    }
+  }
+}
+
+.welcome {
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: .9s;
+}
+
+@-webkit-keyframes welcome {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  82.5% {
+    -webkit-transform: scale(1.03);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+*/
